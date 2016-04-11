@@ -4,16 +4,14 @@ function walk(node)
 {
 	var child, next;
 
-  if (node.tagName.toLowerCase() == 'input' || node.tagName.toLowerCase() == 'textarea' || node.tagName.toLowerCase() == 'script'
-      || node.classList.indexOf('ace_editor') > -1)  //don't screw with the user
-    return;
   
 
 	switch (node.nodeType)  
 	{
     case 3: //text
-        check(node);
-
+        handleText(node);
+    case 1:
+    case 9:
 		case 11: //part of doc
 			child = node.firstChild;
 			while (child) 
@@ -26,9 +24,12 @@ function walk(node)
 	}
 }
 
-function check(textNode) {
+function handleText(textNode) {
 	var txt = textNode.nodeValue;
-  txt = txt.replace(/rn/g, "r n");
+   txt = txt.replace(/rn/gi, function(match, p1, offset, string) {
+    return "r n";
+  });
+
 	textNode.nodeValue = txt;
 }
 

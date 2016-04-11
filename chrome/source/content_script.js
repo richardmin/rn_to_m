@@ -4,8 +4,6 @@ function walk(node)
 {
 	var child, next;
 
-  
-
 	switch (node.nodeType)  
 	{
     case 3: //text

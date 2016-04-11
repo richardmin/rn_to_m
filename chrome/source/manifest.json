@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "rn to r n",
-	"version": "1.0",
+	"version": "1.0.0",
 	
 	"description": "Replaces all instances of lower case rn to r n to add clarity for kerning purposes.",
 	"content_scripts": 

@@ -3,3 +3,6 @@ Changes all instances of rn to r n for kerning clarifications, as some fonts mak
 
 # Coming Soon
 Firefox, Safari versions
+
+# Comming sooner™
+Font detection so this extension is somewhat usable

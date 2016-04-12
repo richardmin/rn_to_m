@@ -24,7 +24,7 @@ function walk(node)
 
 function handleText(textNode) {
 	var txt = textNode.nodeValue;
-   txt = txt.replace(/rn/gi, function(match, p1, offset, string) {
+   txt = txt.replace(/rn/g, function(match, p1, offset, string) {
     return "r n";
   });
 
